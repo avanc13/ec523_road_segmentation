@@ -1,0 +1,38 @@
+dataset/
+variables/
+__pycache__/
+models/
+logs/
+results/
+train_gradaccum.py
+checkpoint.py
+
+data/
+checkpoints/
+*.h5
+*.ckpt
+*.pth
+
+# Python cache & build files
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.so
+
+# Conda / virtual environments
+shared_envs/
+.env
+venv/
+env/
+
+# Jupyter notebook artifacts
+.ipynb_checkpoints/
+
+# IDE/editor config
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
