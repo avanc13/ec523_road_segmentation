@@ -1,0 +1,16 @@
+name: unetCompare
+channels:
+  - defaults
+  - conda-forge
+  - anaconda
+dependencies:
+  - python=3.8.3
+  - tensorflow-gpu=2.2.0
+  - numpy=1.18.5
+  - tqdm=4.46.1         # optional, progress bar
+  - scikit-image=0.17.2
+  - matplotlib=3.2.1     # optional, for visualization/debugging
+  - pillow=7.1.2
+  - beautifulsoup4=4.9.1 # replaces bs4=0.0.1
+  - pydotplus=2.0.2
+  - graphviz=2.38        # optional, for model plotting
