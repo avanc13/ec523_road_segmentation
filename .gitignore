@@ -36,3 +36,11 @@ env/
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+# Explicitly ignore large model files
+EE8204-ResUNet/Best ResUNet.hdf5
+EE8204-ResUNet/previous_models/
+
+EE8204-ResUNet/Road Extraction by Deep Residual U-Net.pdf
+EE8204-ResUNet/images/finalresults/
+EE8204-ResUNet/images/groundtruths/
