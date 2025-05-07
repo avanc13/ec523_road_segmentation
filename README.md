@@ -12,7 +12,7 @@ which consists of:
 ## Model Architectures
 
 ### 🔹 U-Net
-![uNet base architecture](resunet.png)
+![uNet base architecture](unet.png)
 
 navigate to project_unet_road_segment/
 - Two variants:
@@ -27,7 +27,7 @@ navigate to project_unet_road_segment/
   -more Params
 
 ### 🔹 ResUNet
-![ResUnet base architecture](unet.png)
+![ResUnet base architecture](resunet.png)
 
 - Residual blocks with skip connections to ease training
 - Two variants:
