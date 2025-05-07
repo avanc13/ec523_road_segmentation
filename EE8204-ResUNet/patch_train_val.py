@@ -43,8 +43,14 @@ else:
     sampled_mask_path = os.path.join(sample_dataset, 'mask').replace('\\','/')
 
 # IMAGE FILE PARAMETERS
+# image_path = os.path.join(train_dataset, 'image')
+# print(f"Looking for files in: {image_path}")
+# print(f"Exists? {os.path.isdir(image_path)}")
+
 _, _, train_files = next(os.walk(os.path.join(train_dataset, 'image')))
 training_imgs = len(train_files)
+
+
 
 def get_randompatch():
     """
