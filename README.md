@@ -40,7 +40,7 @@ navigate to project_unet_road_segment/
 
 ---
 ### Results
-![Results F1 score](/projectnb/ec523/projects/proj_unet_road_segment/all_models_f1_comparison.png)
+![Results F1 score](all_models_f1_comparison.png)
 In the image:
 ResUnet-BCE(green) is model_resunet_jn.py trained with BCE loss
 ResUnet-BCE-2(red) is model_resunet_ec.py trained with BCE loss
