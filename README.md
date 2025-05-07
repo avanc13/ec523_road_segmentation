@@ -12,11 +12,14 @@ which consists of:
 ## Model Architectures
 
 ### 🔹 U-Net
+![uNet base architecture](resunet.png)
+
 navigate to project_unet_road_segment/
 - Two variants:
   - `model_unet.py`: 
-  -3 downsampling blocks + bottleneck + 3 upsampling blocks
-  -512 filters in bottleneck
+  - 3 downsampling blocks + bottleneck + 3 upsampling blocks
+  - 512 filters in bottleneck
+
 
   - `model_unet_5.py`: 
   - 5 upsampling blocks	5 downsampling blocks + bottleneck + 5 upsampling blocks
@@ -24,14 +27,15 @@ navigate to project_unet_road_segment/
   -more Params
 
 ### 🔹 ResUNet
+![ResUnet base architecture](unet.png)
 
 - Residual blocks with skip connections to ease training
 - Two variants:
   - `model_resunet_ec.py`: 
--Applies BatchNorm + ReLU before convolutions(pre-activation)
+- Applies BatchNorm + ReLU before convolutions(pre-activation)
 - 3-encoder-decoder structure
--uses upSampling2D
--64 → 128 → 256 → 512, 
+- uses upSampling2D
+- 64 → 128 → 256 → 512, 
 
   - `model_resunet_jn.py`: post-activation (Conv → BN → ReLU)
 - Post-activation residual blocks
@@ -42,10 +46,10 @@ navigate to project_unet_road_segment/
 ### Results
 ![Results F1 score](all_models_f1_comparison.png)
 In the image:
-ResUnet-BCE(green) is model_resunet_jn.py trained with BCE loss
-ResUnet-BCE-2(red) is model_resunet_ec.py trained with BCE loss
-ResUnet-Dice(purple) is model_resunet_jn.py trained with DICE loss
-Both Unet results are with model_unet_5.py
+- ResUnet-BCE(green) is model_resunet_jn.py trained with BCE loss
+- ResUnet-BCE-2(red) is model_resunet_ec.py trained with BCE loss
+- ResUnet-Dice(purple) is model_resunet_jn.py trained with DICE loss
+- Both Unet results are with model_unet_5.py
 
 
 
@@ -60,10 +64,10 @@ To run ResUnet:
 1) edit train_resunet.py in the EE204-ResUNet folder to use either the model in 
 - `model_resunet_ec.py`
 - `model_resunet_jn.py`
-example: model = model_resunet_ec.ResUNet((IMG_SIZE, IMG_SIZE, 3)) **make sure you are using correct model you want to run
+example: model = model_resunet_ec.ResUNet((IMG_SIZE, IMG_SIZE, 3)) **make sure you are using correct model you want to run.
 2) edit train_fix_jn.py n proj_unet_road_segment folder to use either the model in 
 - `model_unet.py`
 - `model_unet_5.py`
-example: model = model_unet.UNet((IMG_SIZE, IMG_SIZE, 3)) **make sure model is coming from desired file
+example: model = model_unet.UNet((IMG_SIZE, IMG_SIZE, 3)) **make sure model is coming from desired file.
 
-If you are intrested, debug code, including more complex model variants and extra visulaization during training is lcoated at: EE8204-ResUNet/testing_archs 
+If you are interested, the debugging code, including more complex model variants and extra visulaization during training is located at: EE8204-ResUNet/testing_archs-- there is a separate train script and dataloader located there as well.
